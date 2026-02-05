@@ -138,12 +138,12 @@ const INITIAL_NODES = [
 ];
 
 const INITIAL_CONNECTIONS = [
-    { from: 'ref-1', to: 'gemini' },
-    { from: 'ref-3', to: 'gemini' },
-    { from: 'gemini', to: 'rodin' },
-    { from: 'ref-4', to: 'claude' },
-    { from: 'claude', to: 'flux' },
-    { from: 'flux', to: 'veo' },
+    { from: 'ref-1', to: 'gemini', opacity: 1 },
+    { from: 'ref-3', to: 'gemini', opacity: 1 },
+    { from: 'gemini', to: 'rodin', opacity: 1 },
+    { from: 'ref-4', to: 'claude', opacity: 1 },
+    { from: 'claude', to: 'flux', opacity: 1 },
+    { from: 'flux', to: 'veo', opacity: 1 },
     // Rodin has output handle but no visible line in some refs, adding placeholder if needed
 ];
 

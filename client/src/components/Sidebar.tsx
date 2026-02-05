@@ -3,7 +3,7 @@ import { Home, Folder, Video, RefreshCw, Users, BarChart2, Settings, Trash2, Plu
 import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
-function cn(...inputs) {
+function cn(...inputs: any[]) {
     return twMerge(clsx(inputs));
 }
 
@@ -61,7 +61,13 @@ const Sidebar = () => {
     );
 };
 
-const NavItem = ({ icon, label, active }) => {
+interface NavItemProps {
+    icon: React.ReactNode;
+    label: string;
+    active?: boolean;
+}
+
+const NavItem: React.FC<NavItemProps> = ({ icon, label, active }) => {
     return (
         <div className={cn(
             "flex items-center gap-3 px-4 py-2.5 rounded-lg cursor-pointer transition-all duration-200",

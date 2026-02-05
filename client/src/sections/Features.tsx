@@ -126,7 +126,7 @@ const AnimIntelligentFlow = ({ isNoir }) => {
 
             {/* Target Node */}
             <div className={`w-14 h-14 rounded-xl flex items-center justify-center z-10 ${isNoir ? 'bg-[#1e1e1e] border border-white/10' : 'bg-white border border-gray-200 shadow-sm'}`}>
-                <Image size={20} className="text-blue-500" />
+                <ImageIcon size={20} className="text-blue-500" />
             </div>
 
             {/* Connection Line */}

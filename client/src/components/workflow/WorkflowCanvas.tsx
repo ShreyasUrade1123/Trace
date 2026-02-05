@@ -215,8 +215,8 @@ function WorkflowCanvasInner() {
 
     // Handle selection change
     const handleSelectionChange = useCallback(
-        ({ nodes: selectedNodes }: { nodes: typeof nodes }) => {
-            setSelectedNodeIds(selectedNodes.map(n => n.id));
+        ({ nodes: selectedNodes }: { nodes: any[] }) => {
+            setSelectedNodeIds(selectedNodes.map((n: any) => n.id));
         },
         [setSelectedNodeIds]
     );
