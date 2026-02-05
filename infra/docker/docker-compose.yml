@@ -1,0 +1,95 @@
+version: '3.8'
+
+services:
+  # Node.js API Server
+  api-server:
+    build:
+      context: ../server
+      dockerfile: ../infra/docker/Dockerfile.server
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+      - PORT=3000
+      - DB_DIALECT=postgres
+      - DB_HOST=postgres
+      - DB_PORT=5432
+      - DB_NAME=skydocs
+      - DB_USER=myuser
+      - DB_PASSWORD=mypassword
+      - JWT_SECRET=change-this-in-production
+    volumes:
+      - ../server/uploads:/app/uploads
+    depends_on:
+      - redis
+      - postgres
+
+  # React Frontend (dev mode)
+  web-client:
+    build:
+      context: ../client
+      dockerfile: ../infra/docker/Dockerfile.client
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_URL=http://localhost:3000
+    volumes:
+      - ../client/src:/app/src
+
+  # AI Audio Service
+  ai-audio:
+    build:
+      context: ../ai-audio-service
+      dockerfile: Dockerfile
+    ports:
+      - "8001:8001"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+
+  # AI Video Service
+  ai-video:
+    build:
+      context: ../ai-video-service
+      dockerfile: Dockerfile
+    ports:
+      - "8002:8002"
+
+  # AI Text Service
+  ai-text:
+    build:
+      context: ../ai-text-service
+      dockerfile: Dockerfile
+    ports:
+      - "8003:8003"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+
+  # Redis (Job Queue)
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
+  # PostgreSQL Database
+  postgres:
+    image: postgres:15-alpine
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=myuser
+      - POSTGRES_PASSWORD=mypassword
+      - POSTGRES_DB=skydocs
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U myuser -d skydocs" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+volumes:
+  redis_data:
+  postgres_data:

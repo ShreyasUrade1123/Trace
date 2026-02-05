@@ -1,0 +1,162 @@
+{
+    "User": {
+        "type": "object",
+        "properties": {
+            "id": {
+                "type": "string",
+                "format": "uuid"
+            },
+            "email": {
+                "type": "string",
+                "format": "email"
+            },
+            "name": {
+                "type": "string"
+            },
+            "createdAt": {
+                "type": "string",
+                "format": "date-time"
+            },
+            "updatedAt": {
+                "type": "string",
+                "format": "date-time"
+            }
+        },
+        "required": [
+            "id",
+            "email"
+        ]
+    },
+    "Project": {
+        "type": "object",
+        "properties": {
+            "id": {
+                "type": "string",
+                "format": "uuid"
+            },
+            "name": {
+                "type": "string"
+            },
+            "description": {
+                "type": "string"
+            },
+            "userId": {
+                "type": "string",
+                "format": "uuid"
+            },
+            "createdAt": {
+                "type": "string",
+                "format": "date-time"
+            },
+            "updatedAt": {
+                "type": "string",
+                "format": "date-time"
+            }
+        },
+        "required": [
+            "id",
+            "name",
+            "userId"
+        ]
+    },
+    "Video": {
+        "type": "object",
+        "properties": {
+            "id": {
+                "type": "string",
+                "format": "uuid"
+            },
+            "title": {
+                "type": "string"
+            },
+            "filename": {
+                "type": "string"
+            },
+            "url": {
+                "type": "string"
+            },
+            "thumbnail": {
+                "type": "string"
+            },
+            "duration": {
+                "type": "number"
+            },
+            "status": {
+                "type": "string",
+                "enum": [
+                    "uploading",
+                    "processing",
+                    "ready",
+                    "error"
+                ]
+            },
+            "transcript": {
+                "$ref": "#/Transcript"
+            },
+            "projectId": {
+                "type": "string",
+                "format": "uuid"
+            },
+            "createdAt": {
+                "type": "string",
+                "format": "date-time"
+            },
+            "updatedAt": {
+                "type": "string",
+                "format": "date-time"
+            }
+        },
+        "required": [
+            "id",
+            "title",
+            "filename",
+            "status",
+            "projectId"
+        ]
+    },
+    "Transcript": {
+        "type": "object",
+        "properties": {
+            "text": {
+                "type": "string"
+            },
+            "segments": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "start": {
+                            "type": "number"
+                        },
+                        "end": {
+                            "type": "number"
+                        },
+                        "text": {
+                            "type": "string"
+                        },
+                        "speaker": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "ApiResponse": {
+        "type": "object",
+        "properties": {
+            "success": {
+                "type": "boolean"
+            },
+            "message": {
+                "type": "string"
+            },
+            "data": {
+                "type": "object"
+            },
+            "error": {
+                "type": "string"
+            }
+        }
+    }
+}
