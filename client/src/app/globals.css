@@ -1,0 +1,145 @@
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --font-iki: 'IkiMono', sans-serif;
+  --font-iki-light: 'IkiMonoLight', sans-serif;
+  --font-iki-thin: 'IkiMonoThin', sans-serif;
+  --font-iki-expanded-thin: 'IkiMonoExpandedThin', sans-serif;
+  --font-iki-expanded-light: 'IkiMonoExpandedLight', sans-serif;
+  --font-iki-compressed-thin: 'IkiMonoCompressedThin', sans-serif;
+  --font-iki-condensed-light: 'IkiMonoCondensedLight', sans-serif;
+  --font-iki-condensed-thin: 'IkiMonoCondensedThin', sans-serif;
+  --font-ppneue: 'PPNeueMontreal', sans-serif;
+  --font-ppneue-book: 'PPNeueMontrealBook', sans-serif;
+  --font-ppneue-medium: 'PPNeueMontrealMedium', sans-serif;
+  --font-ppneue-bold: 'PPNeueMontrealBold', sans-serif;
+  --font-movatif: 'MovatifRegular', sans-serif;
+  --font-movatif-book: 'MovatifBook', sans-serif;
+  --font-movatif-light: 'MovatifLight', sans-serif;
+  --font-movatif-ultra-light: 'MovatifUltraLight', sans-serif;
+  --font-satoshi: 'Satoshi', sans-serif;
+  --font-coolvetica: 'Coolvetica', sans-serif;
+  --font-neue-haas: 'Neue Haas Grotesk Display Pro', sans-serif;
+}
+
+/* Custom Font Definitions */
+@font-face {
+  font-family: 'MovatifRegular';
+  src: url('../assets/Fonts/fonnts.com-movatif_rg.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MovatifBook';
+  src: url('../assets/Fonts/fonnts.com-movatif_bk.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MovatifLight';
+  src: url('../assets/Fonts/fonnts.com-movatif_lt.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MovatifUltraLight';
+  src: url('../assets/Fonts/fonnts.com-movatif_ul.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IkiMono';
+  src: url('../assets/Fonts/IkiMono-CompressedLight.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IkiMonoLight';
+  src: url('../assets/Fonts/IkiMono-Light.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IkiMonoThin';
+  src: url('../assets/Fonts/IkiMono-Thin.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IkiMonoExpandedThin';
+  src: url('../assets/Fonts/IkiMono-ExpandedThin.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IkiMonoExpandedLight';
+  src: url('../assets/Fonts/IkiMono-ExpandedLight.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IkiMonoCompressedThin';
+  src: url('../assets/Fonts/IkiMono-CompressedThin.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IkiMonoCondensedLight';
+  src: url('../assets/Fonts/IkiMono-CondensedLight.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'IkiMonoCondensedThin';
+  src: url('../assets/Fonts/IkiMono-CondensedThin.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PPNeueMontreal';
+  src: url('../assets/Fonts/ppneuemontreal-thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PPNeueMontreal';
+  src: url('../assets/Fonts/ppneuemontreal-book.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PPNeueMontreal';
+  src: url('../assets/Fonts/ppneuemontreal-medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PPNeueMontreal';
+  src: url('../assets/Fonts/ppneuemontreal-bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-text-primary font-sans antialiased;
+    overflow-x: hidden;
+  }
+}

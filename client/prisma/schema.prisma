@@ -1,0 +1,92 @@
+// Prisma schema for Weavy.ai Workflow Builder Clone
+// Database: PostgreSQL
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String        @id @default(cuid())
+  clerkId   String        @unique
+  email     String?
+  name      String?
+  workflows Workflow[]
+  runs      WorkflowRun[]
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+}
+
+model Workflow {
+  id          String        @id @default(cuid())
+  name        String
+  description String?
+  nodes       Json          // React Flow nodes
+  edges       Json          // React Flow edges
+  userId      String
+  user        User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  runs        WorkflowRun[]
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  @@index([userId])
+}
+
+model WorkflowRun {
+  id          String       @id @default(cuid())
+  workflowId  String
+  workflow    Workflow     @relation(fields: [workflowId], references: [id], onDelete: Cascade)
+  userId      String
+  user        User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  status      RunStatus    @default(RUNNING)
+  scope       RunScope     @default(FULL)
+  startedAt   DateTime     @default(now())
+  completedAt DateTime?
+  duration    Int?         // milliseconds
+  nodeResults NodeResult[]
+  error       String?
+
+  @@index([workflowId, userId])
+  @@index([userId, startedAt])
+}
+
+model NodeResult {
+  id          String      @id @default(cuid())
+  runId       String
+  run         WorkflowRun @relation(fields: [runId], references: [id], onDelete: Cascade)
+  nodeId      String
+  nodeType    String
+  status      NodeStatus  @default(PENDING)
+  input       Json?
+  output      Json?
+  error       String?
+  startedAt   DateTime    @default(now())
+  completedAt DateTime?
+  duration    Int?        // milliseconds
+
+  @@index([runId])
+}
+
+enum RunStatus {
+  SUCCESS
+  FAILED
+  RUNNING
+  PARTIAL
+}
+
+enum RunScope {
+  FULL
+  PARTIAL
+  SINGLE
+}
+
+enum NodeStatus {
+  SUCCESS
+  FAILED
+  RUNNING
+  PENDING
+}
