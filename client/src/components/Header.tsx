@@ -36,11 +36,11 @@ const Header = () => {
     const checkBg = isNoir ? "bg-white text-black" : "bg-black text-white";
 
     return (
-        <header className={`fixed top-0 left-0 w-full z-50 py-5 px-8 md:px-12 transition-all duration-300 ${isScrolled ? `backdrop-blur-lg ${isNoir ? 'bg-black/10' : 'bg-white/10'} shadow-sm` : 'bg-transparent'}`}>
+        <header className={`fixed top-0 left-0 w-full z-50 py-2 sm:py-2.5 px-4 sm:px-8 md:px-6 transition-all duration-300 ${isScrolled ? `backdrop-blur-2xl ${isNoir ? 'bg-black/30' : 'bg-gray/40'} shadow-sm` : 'bg-transparent'}`}>
             <div className="w-full max-w-[1800px] mx-auto flex items-center justify-between">
 
                 {/* Left Side: HOME / PRICING */}
-                <div className={`flex items-center gap-12 text-sm md:text-base font-iki tracking-wide font-regular ${textColor}`}>
+                <div className={`flex items-center gap-4 sm:gap-8 md:gap-12 lg:gap-60 text-[10px] md:text-[12px] font-tgfrekuent tracking-wide font-normal ${textColor}`}>
                     <Link href="/" className="flex items-center hover:opacity-100 transition-opacity">
                         {isActive('/') && (
                             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className={`mr-2 ${isNoir ? 'text-white' : 'text-[#467A53]'}`}>
@@ -60,7 +60,7 @@ const Header = () => {
                 </div>
 
                 {/* Right Side: LOG-IN / SIGN-UP / Status */}
-                <div className={`flex items-center gap-8 text-sm md:text-base font-iki font-regular tracking-wide ${textColor}`}>
+                <div className={`flex items-center gap-2 sm:gap-4 text-[10px] md:text-[12px] font-tgfrekuent font-normal tracking-wide ${textColor}`}>
                     <button
                         onClick={() => router.push('/sign-in')}
                         className="hover:opacity-60 transition-opacity uppercase cursor-pointer"
@@ -69,7 +69,7 @@ const Header = () => {
                     </button>
                     <button
                         onClick={() => router.push('/sign-up')}
-                        className={`${isNoir ? 'bg-white text-black hover:bg-gray-200' : 'bg-black text-white hover:bg-gray-800'} px-3 py-1 rounded-[4px] transition-colors uppercase cursor-pointer`}
+                        className={`${isNoir ? 'bg-white text-black hover:bg-gray-200' : 'bg-black text-white hover:bg-gray-800'} px-1 py-1 rounded-[4px] transition-colors uppercase cursor-pointer`}
                     >
                         Sign-up
                     </button>
@@ -78,7 +78,7 @@ const Header = () => {
                     <div className="relative">
                         <button
                             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                            className={`w-10 h-10 rounded-md flex items-center justify-center cursor-pointer hover:bg-white/5 transition-colors`}
+                            className={`w-4 h-10 rounded-md flex items-center justify-center cursor-pointer hover:bg-white/5 transition-colors`}
                         >
                             <div className="w-3.5 h-3.5 rounded-full bg-[#1A4D2E] shadow-sm ring-1 ring-inset ring-black/10"></div>
                         </button>

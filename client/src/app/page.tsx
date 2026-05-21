@@ -22,7 +22,7 @@ const LandingPage = () => {
   const heroRef = useRef<HTMLDivElement>(null);
 
   const themeStyles: Record<string, { bg: string; text: string; gridOpacity: number; gridColor?: string; radialColor?: string }> = {
-    SAMBA: { bg: "bg-[#FDFBF7]", text: "text-black", gridOpacity: 0.6, gridColor: "#E5E5E5", radialColor: "#D4D4D4" },
+    SAMBA: { bg: "bg-[#EFEFEF]", text: "text-black", gridOpacity: 0.6, gridColor: "#E5E5E5", radialColor: "#D4D4D4" },
     NOIR: { bg: "bg-[#2D2D2D]", text: "text-white", gridOpacity: 0.3, gridColor: "#4f4f4fff", radialColor: "#4f4f4fff" },
     PSYCHOLOGICAL: { bg: "bg-[#FDFBF7]", text: "text-black", gridOpacity: 0.6 },
     GIALLO: { bg: "bg-[#FDFBF7]", text: "text-black", gridOpacity: 0.6 },
@@ -54,6 +54,10 @@ const LandingPage = () => {
 
   return (
     <div className={`min-h-screen ${activeStyle.bg} ${activeStyle.text} font-sans relative flex flex-col transition-colors duration-500`}>
+      {/* Hero Background Gradient (Samba Only) */}
+      {currentTheme === 'SAMBA' && (
+        <div className="absolute top-0 left-0 w-full h-[100vh] pointer-events-none bg-gradient-to-b from-[#FDFBF8] to-[#EFEFEF] z-0"></div>
+      )}
       {/* Grid Pattern */}
       <div className="absolute inset-0 w-full h-full pointer-events-none z-0" style={{ backgroundImage: `linear-gradient(${activeStyle.gridColor || '#E5E5E5'} 1px, transparent 1px), linear-gradient(90deg, ${activeStyle.gridColor || '#E5E5E5'} 1px, transparent 1px), radial-gradient(circle at 1px 1px, ${activeStyle.radialColor || '#D4D4D4'} 3px, transparent 3px)`, backgroundSize: '60px 60px', opacity: activeStyle.gridOpacity }}></div>
 

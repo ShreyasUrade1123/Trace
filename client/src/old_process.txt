@@ -1,0 +1,73 @@
+Created At: 2026-05-20T18:01:39Z
+Completed At: 2026-05-20T18:01:40Z
+File Path: `file:///C:/Users/SHREYAS%20URADE/Desktop/Project%20Folder/Trace-Test/frontend/client/src/sections/Process.tsx`
+Total Lines: 346
+Total Bytes: 15701
+Showing lines 1 to 346
+The following code has been modified to include a line number before every line, in the format: <line_number>: <original_line>. Please note that any changes targeting the original code should remove the line number, colon, and leading space.
+1: import React, { useRef, useMemo, useState, useEffect } from 'react';
+2: import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
+3: 
+4: // --- VISUALIZATIONS ---
+5: 
+6: // 1. Capture: Background Recording (Renamed from Discovery)
+7: const CaptureVisual = ({ isSamba }) => {
+8:     return (
+9:         <div className="w-full h-full flex items-center justify-center relative overflow-hidden bg-black/5 dark:bg-black/50">
+10:             {/* Grid Background */}
+11:             <div className="absolute inset-0 opacity-20"
+12:                 style={{
+13:                     backgroundImage: `linear-gradient(${isSamba ? '#000' : '#fff'} 1px, transparent 1px), linear-gradient(90deg, ${isSamba ? '#000' : '#fff'} 1px, transparent 1px)`,
+14:                     backgroundSize: '20px 20px'
+15:                 }}
+16:             />
+17:             {/* Scanning Line */}
+18:             <motion.div
+19:                 animate={{ top: ['0%', '100%', '0%'] }}
+20:                 transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+21:                 className={`absolute left-0 right-0 h-px box-shadow-lg z-10 ${isSamba ? 'bg-black shadow-[0_0_10px_rgba(0,0,0,0.5)]' : 'bg-[#FF3B30] shadow-[0_0_15px_#FF3B30]'}`}
+22:             />
+23: 
+24:             {/* Data Points */}
+25:             <div className="grid grid-cols-2 gap-8 relative z-0">
+26:                 {['Video', 'Audio', 'Clicks', 'Scrolls'].map((label, i) => (
+27:                     <motion.div
+28:                         key={label}
+29:                 
+<truncated 13802 bytes>
+                                    <motion.button
+313:                                                 whileHover={{ scale: 1.02 }}
+314:                                                 whileTap={{ scale: 0.98 }}
+315:                                                 className={`mt-10 px-8 py-4 rounded-full text-sm font-bold uppercase tracking-widest transition-all
+316:                                                     ${isSamba ? 'bg-black text-white hover:bg-gray-800' : 'bg-white text-black hover:bg-gray-200'}`}
+317:                                             >
+318:                                                 Start Project &rarr;
+319:                                             </motion.button>
+320:                                         )}
+321:                                     </div>
+322: 
+323:                                     {/* Dynamic Visualization */}
+324:                                     <motion.div
+325:                                         initial={{ opacity: 0, scale: 0.95 }}
+326:                                         whileInView={{ opacity: 1, scale: 1 }}
+327:                                         transition={{ duration: 0.8 }}
+328:                                         className="order-1 lg:order-2 w-full aspect-square md:aspect-video lg:aspect-square bg-white/5 rounded-2xl overflow-hidden relative border"
+329:                                         style={{ borderColor: isSamba ? 'rgba(0,0,0,0.05)' : 'rgba(255,255,255,0.05)' }}
+330:                                     >
+331:                                         <step.Visual isSamba={isSamba} />
+332:                                     </motion.div>
+333: 
+334:                                 </div>
+335:                             </div>
+336:                         ))}
+337:                     </div>
+338: 
+339:                 </div>
+340:             </div>
+341:         </section>
+342:     );
+343: };
+344: 
+345: export default Process;
+346: 
+The above content shows the entire, complete file contents of the requested file.

@@ -1,5 +1,4 @@
-import React, { useRef } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import React from 'react';
 
 const Typewriter = ({ words, delay = 3000 }) => {
     const [index, setIndex] = React.useState(0);
@@ -45,8 +44,6 @@ const Typewriter = ({ words, delay = 3000 }) => {
 };
 
 const Footer = ({ currentTheme }) => {
-    // Theme logic - default to the image style (White/Black) if theme is active
-    const isSamba = currentTheme === 'SAMBA';
     // However, the user said "exactly same as image", which is white bg, black text.
     // I will make it adhere to the theme but mapped correctly.
     // If NOIR (dark), it should probably invert for consistency, OR stay white if they want EXACT replica always.
@@ -56,18 +53,17 @@ const Footer = ({ currentTheme }) => {
     const bgColor = currentTheme === 'NOIR' ? 'bg-[#0a0a0a]' : 'bg-white';
     const textColor = currentTheme === 'NOIR' ? 'text-white' : 'text-black';
     const subTextColor = currentTheme === 'NOIR' ? 'text-gray-400' : 'text-gray-500';
-    const borderColor = currentTheme === 'NOIR' ? 'border-white/10' : 'border-black/10';
     const inputBg = currentTheme === 'NOIR' ? 'bg-white/10' : 'bg-[#EDECE8]';
 
     return (
         <section className={`relative ${bgColor} ${textColor} pt-20 pb-0 overflow-hidden font-sans transition-colors duration-500`}>
-            <div className="container mx-auto px-6 md:px-12 relative z-10">
+            <div className="container mx-auto px-6 md:px-4 relative z-10">
 
                 {/* Top Headline */}
                 <div className="mb-24">
                     <h2 className="text-3xl md:text-5xl font-semibold tracking-tight leading-[1.1] font-neueHaas max-w-4xl">
                         Made for
-                        <span className="ml-4">
+                        <span className="ml-2">
                             <Typewriter words={["Art directors.", "Storytellers.", "Agencies.", "Designers."]} />
                         </span>
                         <br />
@@ -131,7 +127,7 @@ const Footer = ({ currentTheme }) => {
 
             {/* Massive Logo at Bottom */}
             <div className="w-full overflow-hidden leading-none flex justify-center pointer-events-none select-none">
-                <h1 className="text-[42vw] font-bold tracking-tighter leading-[0.8] font-neueHaas translate-y-[5%]">
+                <h1 className="text-[41vw] font-bold tracking-tighter leading-[0.8] font-neueHaas translate-y-[5%]">
                     Trace
                 </h1>
             </div>

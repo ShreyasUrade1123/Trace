@@ -1,0 +1,14 @@
+Created At: 2026-05-20T18:22:55Z
+Completed At: 2026-05-20T18:27:38Z
+
+				The command failed with exit code: 1
+				Output:
+				Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+    import json; [print(json.loads(line)['content'][:500] + '...') for line in open(r'C:\Users\SHREYAS URADE\.gemini\antigravity\brain\264c1a6f-8d3d-4543-83ca-2aa6c3a2cf8c\.system_generated\logs\transcript.jsonl', encoding='utf-8') if 'zero to launch' in line]
+                        ~~~~~~~~~~~~~~~~^^^^^^^^^^^
+KeyError: 'content'
+<USER_REQUEST>
+<section id="process" class="section_process"><div class="padding-global"><div class="container-large no-border-top-dark"><div class="padding-section-large is-dark"><div data-w-id="8621f428-0097-59bc-f0c7-3d8beb5f5b67" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d; opacity: 1;" class="process_header"><div class="eye-brow text-color-primary">
+        <span class="eye-brow-ghost"...
+

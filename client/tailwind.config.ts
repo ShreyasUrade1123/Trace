@@ -51,6 +51,10 @@ const config: Config = {
         satoshi: ['Satoshi', 'sans-serif'],
         coolvetica: ['Coolvetica', 'sans-serif'],
         neueHaas: ['Neue Haas Grotesk Display Pro', 'sans-serif'],
+        tgfrekuent: ['TGFrekuentMono', 'monospace'],
+        zwizz: ['Zwizz', 'sans-serif'],
+        helveticaNow: ['HelveticaNowDisplay', 'sans-serif'],
+        
       },
       animation: {
         blob: "blob 7s infinite",

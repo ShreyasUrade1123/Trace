@@ -22,118 +22,211 @@
   --font-satoshi: 'Satoshi', sans-serif;
   --font-coolvetica: 'Coolvetica', sans-serif;
   --font-neue-haas: 'Neue Haas Grotesk Display Pro', sans-serif;
+  --font-helvetica-now: 'HelveticaNowDisplay', sans-serif;
 }
 
 /* Custom Font Definitions */
+
+@font-face {
+  font-family: 'HelveticaNowDisplay';
+  src: url('../assets/Fonts/Helvetica Now Display/HelveticaNowDisplay-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNowDisplay';
+  src: url('../assets/Fonts/Helvetica Now Display/HelveticaNowDisplay-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
 @font-face {
   font-family: 'MovatifRegular';
-  src: url('../assets/Fonts/fonnts.com-movatif_rg.otf') format('opentype');
+  src: url('../assets/Fonts/movatif/fonnts.com-movatif_rg.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'MovatifBook';
-  src: url('../assets/Fonts/fonnts.com-movatif_bk.otf') format('opentype');
+  src: url('../assets/Fonts/movatif/fonnts.com-movatif_bk.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'MovatifLight';
-  src: url('../assets/Fonts/fonnts.com-movatif_lt.otf') format('opentype');
+  src: url('../assets/Fonts/movatif/fonnts.com-movatif_lt.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'MovatifUltraLight';
-  src: url('../assets/Fonts/fonnts.com-movatif_ul.otf') format('opentype');
+  src: url('../assets/Fonts/movatif/fonnts.com-movatif_ul.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'IkiMono';
-  src: url('../assets/Fonts/IkiMono-CompressedLight.otf') format('opentype');
+  src: url('../assets/Fonts/IkiMono/IkiMono-CompressedLight.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'IkiMonoLight';
-  src: url('../assets/Fonts/IkiMono-Light.otf') format('opentype');
+  src: url('../assets/Fonts/IkiMono/IkiMono-Light.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'IkiMonoThin';
-  src: url('../assets/Fonts/IkiMono-Thin.otf') format('opentype');
+  src: url('../assets/Fonts/IkiMono/IkiMono-Thin.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'IkiMonoExpandedThin';
-  src: url('../assets/Fonts/IkiMono-ExpandedThin.otf') format('opentype');
+  src: url('../assets/Fonts/IkiMono/IkiMono-ExpandedThin.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'IkiMonoExpandedLight';
-  src: url('../assets/Fonts/IkiMono-ExpandedLight.otf') format('opentype');
+  src: url('../assets/Fonts/IkiMono/IkiMono-ExpandedLight.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'IkiMonoCompressedThin';
-  src: url('../assets/Fonts/IkiMono-CompressedThin.otf') format('opentype');
+  src: url('../assets/Fonts/IkiMono/IkiMono-CompressedThin.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'IkiMonoCondensedLight';
-  src: url('../assets/Fonts/IkiMono-CondensedLight.otf') format('opentype');
+  src: url('../assets/Fonts/IkiMono/IkiMono-CondensedLight.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'IkiMonoCondensedThin';
-  src: url('../assets/Fonts/IkiMono-CondensedThin.otf') format('opentype');
+  src: url('../assets/Fonts/IkiMono/IkiMono-CondensedThin.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'PPNeueMontreal';
-  src: url('../assets/Fonts/ppneuemontreal-thin.otf') format('opentype');
+  src: url('../assets/Fonts/PP Neue Mono/ppneuemontreal-thin.otf') format('opentype');
   font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'PPNeueMontreal';
-  src: url('../assets/Fonts/ppneuemontreal-book.otf') format('opentype');
+  src: url('../assets/Fonts/PP Neue Mono/ppneuemontreal-book.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'PPNeueMontreal';
-  src: url('../assets/Fonts/ppneuemontreal-medium.otf') format('opentype');
+  src: url('../assets/Fonts/PP Neue Mono/ppneuemontreal-medium.otf') format('opentype');
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'PPNeueMontreal';
-  src: url('../assets/Fonts/ppneuemontreal-bold.otf') format('opentype');
+  src: url('../assets/Fonts/PP Neue Mono/ppneuemontreal-bold.otf') format('opentype');
   font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TGFrekuentMono';
+  src: url('../assets/Fonts/TG Frekuent Mono/TG Frekuent Mono-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TGFrekuentMono';
+  src: url('../assets/Fonts/TG Frekuent Mono/TG Frekuent Mono-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TGFrekuentMono';
+  src: url('../assets/Fonts/TG Frekuent Mono/TG Frekuent Mono-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TGFrekuentMono';
+  src: url('../assets/Fonts/TG Frekuent Mono/TG Frekuent Mono-ExtraBold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Zwizz';
+  src: url('../assets/Fonts/Zwiss/Zwizz-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Zwizz';
+  src: url('../assets/Fonts/Zwiss/Zwizz-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Zwizz';
+  src: url('../assets/Fonts/Zwiss/Zwizz-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Zwizz';
+  src: url('../assets/Fonts/Zwiss/Zwizz-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Zwizz';
+  src: url('../assets/Fonts/Zwiss/Zwizz-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Zwizz';
+  src: url('../assets/Fonts/Zwiss/Zwizz-ExtraBold.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Zwizz';
+  src: url('../assets/Fonts/Zwiss/Zwizz-Black.woff') format('woff');
+  font-weight: 900;
   font-style: normal;
 }
 
@@ -141,5 +234,71 @@
   body {
     @apply bg-background text-text-primary font-sans antialiased;
     overflow-x: hidden;
+  }
+}
+
+/* Hero Responsive Font Sizes */
+:root {
+  /* Logo: Mobile 320→480px */
+  --hero-logo-mobile: clamp(130px, -22px + 47.5vw, 200px);
+
+  /* Logo: Tablet 480→990px */
+  --hero-logo-tablet: clamp(200px, 7.06px + 40.2vw, 405px);
+
+  /* Logo: Laptop 991→1440px */
+  --hero-logo-laptop: clamp(134px, -234px + 37.2vw, 252px);
+
+  /* Logo: Ultra 1440→2560px */
+  --hero-logo-ultra: clamp(252px, 224px + 1.96vw, 272px);
+
+  /* Tagline: Mobile 320→480px */
+  --hero-tag-mobile: clamp(16px, 14.5px + 0.47vw, 17px);
+
+  /* Tagline: Tablet 480→990px */
+  --hero-tag-tablet: clamp(17px, 11.5px + 1.08vw, 22px);
+
+  /* Tagline: Laptop 991→1440px */
+  --hero-tag-laptop: clamp(22px, 10px + 1.12vw, 27px);
+
+  /* Tagline: Ultra 1440→2560px */
+  --hero-tag-ultra: clamp(27px, 21px + 0.54vw, 32px);
+}
+
+/* Apply the right variable per zone */
+.hero-logo {
+  font-size: var(--hero-logo-mobile);
+}
+
+.hero-tagline {
+  font-size: var(--hero-tag-mobile);
+}
+
+@media (min-width: 480px) {
+  .hero-logo {
+    font-size: var(--hero-logo-tablet);
+  }
+
+  .hero-tagline {
+    font-size: var(--hero-tag-tablet);
+  }
+}
+
+@media (min-width: 991px) {
+  .hero-logo {
+    font-size: var(--hero-logo-laptop);
+  }
+
+  .hero-tagline {
+    font-size: var(--hero-tag-laptop);
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero-logo {
+    font-size: var(--hero-logo-ultra);
+  }
+
+  .hero-tagline {
+    font-size: var(--hero-tag-ultra);
   }
 }

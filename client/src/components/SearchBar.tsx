@@ -15,7 +15,7 @@ const SearchBar = forwardRef<HTMLDivElement, SearchBarProps>(({ placeholder = "S
 
     return (
         <div ref={ref} className={`flex justify-center pointer-events-auto z-50 ${className}`} style={style}>
-            <div className={`w-full max-w-[850px] mx-4 rounded-full p-1.5 pl-6 flex items-center shadow-lg hover:shadow-xl transition-all duration-300 backdrop-blur-lg ${isNoir ? 'bg-black/20 border-white/10' : 'bg-white/10 border-white/20'} ${containerClass}`}>
+            <div className={`w-full max-w-[800px] mx-4 rounded-full p-1.5 pl-7 flex items-center shadow-lg hover:shadow-xl transition-all duration-300 backdrop-blur-2xl border ${isNoir ? 'bg-black/40 border-white/20' : 'bg-black/10 border-black/10 shadow-black/5'} ${containerClass}`}>
                 <input
                     type="text"
                     placeholder={placeholder}
